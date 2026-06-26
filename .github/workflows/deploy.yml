@@ -6,7 +6,7 @@ name: Deploy frontend to GitHub Pages
 # backend is NOT hosted here. On the live site, login, theming and the offline
 # "Onboarding Agent" work; onboarding, persistence and the dashboard need a
 # reachable backend. To enable them, host the backend publicly (Render, Railway,
-# Fly.io, a VM, …) and set VITE_API_BASE in frontend/.env.production to its URL.
+# Fly.io, a VM, …) and set VITE_API_BASE in Frontend/.env.production to its URL.
 
 # Quoted so YAML doesn't parse the key as the boolean `true` (a common linter trip).
 "on":
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: frontend
+        working-directory: Frontend  # ✅ Fixed: was 'frontend'
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -39,7 +39,7 @@ jobs:
         with:
           node-version: "22"
           cache: npm
-          cache-dependency-path: frontend/package-lock.json
+          cache-dependency-path: Frontend/package-lock.json  # ✅ Fixed: was 'frontend'
 
       - name: Install dependencies
         run: npm ci
@@ -50,7 +50,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: frontend/dist # path is relative to the repo root
+          path: Frontend/dist  # ✅ Fixed: was 'frontend/dist'
 
   deploy:
     needs: build
