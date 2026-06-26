@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "From Workflow to Agent — ADLC HR onboarding agent demo (React + Vite, EmailJS).",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
