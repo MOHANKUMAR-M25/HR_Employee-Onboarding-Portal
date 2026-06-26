@@ -1,4 +1,4 @@
-# From Workflow to Agent — ADLC HR Onboarding Demo
+# From Workflow to Agentic (Automation) using AI agent — ADLC HR Onboarding Demo
 
 A live demo for the lightning talk **"From Workflow to Agent: How HR Onboarding
 Changes When AI Thinks."** It shows what onboarding looks like when a classic
