@@ -1,7 +1,17 @@
-name: Deploy to GitHub Pages
-on:
+name: Deploy frontend to GitHub Pages
+
+# Builds the Vite frontend and publishes it to GitHub Pages.
+#
+# IMPORTANT: GitHub Pages serves static files only — the zero-dependency Java
+# backend is NOT hosted here. On the live site, login, theming and the offline
+# "Onboarding Agent" work; onboarding, persistence and the dashboard need a
+# reachable backend. To enable them, host the backend publicly (Render, Railway,
+# Fly.io, a VM, …) and set VITE_API_BASE in frontend/.env.production to its URL.
+
+# Quoted so YAML doesn't parse the key as the boolean `true` (a common linter trip).
+"on":
   push:
-    branches: [main, master]
+    branches: [main] # change to your default branch if it isn't "main"
   workflow_dispatch:
 
 permissions:
@@ -9,36 +19,38 @@ permissions:
   pages: write
   id-token: write
 
+# Allow one Pages deployment at a time; a newer push cancels an in-progress run.
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 25
-          cache: npm          # remove this line if you have no package-lock.json
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4   # auto-injects correct base path
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Install dependencies
-        run: npm ci             # requires committed package-lock.json; else use: npm install
+        run: npm ci
 
-      - name: Build
+      - name: Build (production)
         run: npm run build
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist            # MUST match your build output dir
+          path: frontend/dist # path is relative to the repo root
 
   deploy:
     needs: build
@@ -49,4 +61,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
