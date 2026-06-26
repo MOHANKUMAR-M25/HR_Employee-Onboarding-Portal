@@ -1,0 +1,9 @@
+# The backend image only needs backend/src and sample-new-hires.csv — keep the
+# build context small and exclude everything else.
+.git
+.github
+docs
+frontend
+backend/out
+**/node_modules
+*.md

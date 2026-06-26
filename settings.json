@@ -1,0 +1,7 @@
+{
+  // Treat .yml/.yaml as YAML so workflow files aren't parsed/linted as JS/TS.
+  "files.associations": {
+    "*.yml": "yaml",
+    "*.yaml": "yaml"
+  }
+}
