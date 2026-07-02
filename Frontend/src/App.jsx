@@ -526,7 +526,7 @@ function Portal({ user, onSignOut }) {
           <BrandLogo />
           <span className="brand-divider" />
           <div className="brand-text">
-            <h1>Employee Onboarding</h1>
+            <h1>Employee Onboarding Portal</h1>
             <p>Personalised, policy-aware onboarding for every new hire</p>
           </div>
         </div>
