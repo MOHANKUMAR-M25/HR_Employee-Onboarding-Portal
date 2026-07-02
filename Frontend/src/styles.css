@@ -123,10 +123,14 @@ body {
 .login-brand .cog-logo-svg { height: 40px; }
 .cog-logo-word {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  font-size: 28px; font-weight: 700; letter-spacing: -1.2px;
+  font-size: 30px; font-weight: 700; letter-spacing: -1.2px;
+}
+/* Login page: override cog-logo-word for smaller, aligned font size */
+.login-brand .cog-logo-word {
+  font-size: 28px;
 }
 .brand-divider { width: 1px; height: 34px; background: var(--line-strong); }
-.brand-text h1 { margin: 0; font-size: clamp(20px, 2.8vw, 28px); color: var(--text); }
+.brand-text h1 { margin: 0; font-size: clamp(18px, 2.4vw, 24px); color: var(--text); }
 .brand-text p { margin: 3px 0 0; color: var(--muted); font-size: 13px; }
 
 .header-status { display: flex; align-items: center; gap: 12px; font-size: 13px; }
