@@ -37,7 +37,7 @@ export default function BrandLogo() {
       <polygon points="52,28 40,7 16,7 4,28 16,49 40,49" fill="url(#cogGrad)" />
       <polygon points="21,16 21,40 41,28" fill="#fff" />
       <text x="64" y="38" className="cog-logo-word" fill="currentColor">
-        cognisoft
+        Cognisoft
       </text>
     </svg>
   );
