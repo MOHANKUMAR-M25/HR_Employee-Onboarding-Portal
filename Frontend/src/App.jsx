@@ -455,7 +455,7 @@ function Portal({ user, onSignOut }) {
     },
     remove: (name) => {
       const h = live.current.hires.find((x) => `${x.name} ${x.email}`.toLowerCase().includes(String(name).toLowerCase()));
-      if (!h) return { error: `I couldn't find a candidate matching “${name}”.` };
+      if (!h) return { error: `I couldn't find a candidate matching "${name}".` };
       removeHire(h._key);
       live.current.hires = live.current.hires.filter((x) => x._key !== h._key);
       return { removed: h.name };
@@ -680,7 +680,7 @@ function Portal({ user, onSignOut }) {
       )}
 
       <footer className="app-footer">
-        Cognizant Employee Onboarding · React + Vite frontend · zero-dependency
+        Cognisoft Employee Onboarding · React + Vite frontend · zero-dependency
         Java onboarding agent
       </footer>
 
@@ -696,7 +696,7 @@ function Placeholder({ running, progress }) {
     ? progress && progress.total > 1
       ? `Onboarding ${progress.done} of ${progress.total} candidates…`
       : "Building a personalised onboarding plan…"
-    : "Choose or import a hire and press “Start onboarding” to generate their plan.";
+    : "Choose or import a hire and press "Start onboarding" to generate their plan.";
   return (
     <div className="panel panel-empty">
       <div className="empty-inner">

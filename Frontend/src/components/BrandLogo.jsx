@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-// The Cognizant brand logo. Uses the real asset at frontend/public/cognizant-logo.svg
+// The Cognisoft brand logo. Uses the real asset at frontend/public/cognisoft-logo.svg
 // (falls back to .png, then to a drawn approximation) so the header/login never breaks.
-const SOURCES = ["/cognizant-logo.svg", "/cognizant-logo.png"];
+const SOURCES = ["/cognisoft-logo.svg", "/cognisoft-logo.png"];
 
 export default function BrandLogo() {
   const [idx, setIdx] = useState(0);
@@ -12,7 +12,7 @@ export default function BrandLogo() {
       <img
         className="cog-logo-img"
         src={SOURCES[idx]}
-        alt="Cognizant"
+        alt="Cognisoft"
         onError={() => setIdx((i) => i + 1)}
       />
     );
@@ -24,7 +24,7 @@ export default function BrandLogo() {
       className="cog-logo-svg"
       viewBox="0 0 270 56"
       role="img"
-      aria-label="Cognizant"
+      aria-label="Cognisoft"
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
@@ -37,7 +37,7 @@ export default function BrandLogo() {
       <polygon points="52,28 40,7 16,7 4,28 16,49 40,49" fill="url(#cogGrad)" />
       <polygon points="21,16 21,40 41,28" fill="#fff" />
       <text x="64" y="38" className="cog-logo-word" fill="currentColor">
-        cognizant
+        cognisoft
       </text>
     </svg>
   );

@@ -122,7 +122,7 @@ export default function Login({ onAuthed }) {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@cognizant.com"
+              placeholder="you@cognisoft.com"
               autoComplete="username"
               autoFocus
             />
