@@ -110,7 +110,7 @@ export default function Login({ onAuthed }) {
       <div className="login-card">
         <div className="login-brand">
           <BrandLogo />
-          <h1 className="login-title">HR Portal</h1>
+          {/* <h1 className="login-title">HR Portal</h1> */}
         </div>
         <p className="login-sub">Personalised, policy-aware onboarding for every new hire</p>
 
