@@ -696,7 +696,7 @@ function Placeholder({ running, progress }) {
     ? progress && progress.total > 1
       ? `Onboarding ${progress.done} of ${progress.total} candidates…`
       : "Building a personalised onboarding plan…"
-    : "Choose or import a hire and press "Start onboarding" to generate their plan.";
+    : `Choose or import a hire and press "Start onboarding" to generate their plan.`;
   return (
     <div className="panel panel-empty">
       <div className="empty-inner">
