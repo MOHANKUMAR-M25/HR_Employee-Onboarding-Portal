@@ -93,7 +93,7 @@ body {
 }
 .brand { display: flex; align-items: center; gap: 16px; }
 .cog-logo {
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 800;
   letter-spacing: -0.5px;
   color: var(--cog-navy);
@@ -123,10 +123,10 @@ body {
 .login-brand .cog-logo-svg { height: 40px; }
 .cog-logo-word {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  font-size: 30px; font-weight: 700; letter-spacing: -1.2px;
+  font-size: 38px; font-weight: 700; letter-spacing: -1.2px;
 }
 .brand-divider { width: 1px; height: 34px; background: var(--line-strong); }
-.brand-text h1 { margin: 0; font-size: clamp(18px, 2.4vw, 24px); color: var(--text); }
+.brand-text h1 { margin: 0; font-size: clamp(20px, 2.8vw, 28px); color: var(--text); }
 .brand-text p { margin: 3px 0 0; color: var(--muted); font-size: 13px; }
 
 .header-status { display: flex; align-items: center; gap: 12px; font-size: 13px; }
@@ -733,7 +733,7 @@ select.input { cursor: pointer; }
 .login-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; line-height: 1; }
 .login-brand .cog-logo-img, .login-brand .cog-logo-svg { display: block; flex: none; }
 .login-brand-sep { color: var(--muted); font-size: 26px; line-height: 1; }
-.login-title { margin: 0; font-size: 26px; line-height: 1; color: var(--text); }
+.login-title { margin: 0; font-size: 32px; line-height: 1; color: var(--text); }
 .login-sub { margin: 0 0 22px; color: var(--muted); font-size: 13px; }
 .login-form { display: flex; flex-direction: column; gap: 14px; }
 .pw-wrap { position: relative; display: flex; align-items: center; }
